@@ -21,7 +21,10 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-
+      
+      - name: Clean Gradle Wrapper
+        run: rm -rf ~/.gradle/wrapper/
+      
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
